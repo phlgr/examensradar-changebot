@@ -1,0 +1,13 @@
+{
+	"name": "changebot",
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"lint": "biome check --write .",
+		"knip": "knip"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.15",
+		"knip": "5.83.1"
+	}
+}

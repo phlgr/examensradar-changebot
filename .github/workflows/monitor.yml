@@ -1,0 +1,37 @@
+name: ChangeBot
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+
+permissions:
+  contents: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check endpoint status
+        uses: phlgr/changebot-monitor@main
+        with:
+          command: "update"
+        env:
+          # Pass GitHub secrets/variables as environment variables
+          # These are interpolated into .changebotrc.yml via ${VAR_NAME} syntax
+          #
+          # Set these in your repo's Settings > Secrets and variables > Actions:
+          # - Variables (vars.*): for non-sensitive values like NTFY_TOPIC
+          # - Secrets (secrets.*): for sensitive values like webhook URLs with tokens
+          NTFY_TOPIC: ${{ vars.NTFY_TOPIC }}
+
+      - name: Summary
+        run: |
+          echo "Website monitoring completed at $(date)"
