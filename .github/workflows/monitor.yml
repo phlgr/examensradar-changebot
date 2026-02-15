@@ -30,7 +30,7 @@ jobs:
           # Set these in your repo's Settings > Secrets and variables > Actions:
           # - Variables (vars.*): for non-sensitive values like NTFY_TOPIC
           # - Secrets (secrets.*): for sensitive values like webhook URLs with tokens
-          NTFY_TOPIC: ${{ vars.NTFY_TOPIC }}
+          EXAMENSRADAR_WEBHOOK_SECRET: ${{ secrets.EXAMENSRADAR_WEBHOOK_SECRET }}
 
       - name: Summary
         run: |
