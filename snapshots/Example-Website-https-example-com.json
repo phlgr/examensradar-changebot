@@ -1,0 +1,15 @@
+{
+  "url": "https://example.com",
+  "name": "Example Website",
+  "current": {
+    "timestamp": "2026-02-15T20:23:45.728Z",
+    "content": "<!doctype html><html lang=\"en\"><head><title>Example Domain</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style></head><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href=\"https://iana.org/domains/example\">Learn more</a></p></div></body></html>\n",
+    "status": 200,
+    "hash": "fb91d75a6bb430787a61b0aec5e374f580030f2878e1613eab5ca6310f7bbb9a"
+  },
+  "last_check": "2026-02-15T20:23:45.728Z",
+  "change_count": 0,
+  "error_count": 0,
+  "enabled": true,
+  "selector": null
+}
