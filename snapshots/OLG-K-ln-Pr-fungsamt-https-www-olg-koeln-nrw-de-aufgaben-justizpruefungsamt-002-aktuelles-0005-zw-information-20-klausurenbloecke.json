@@ -1,0 +1,15 @@
+{
+  "url": "https://www.olg-koeln.nrw.de/aufgaben/justizpruefungsamt/002_aktuelles/0005_zw_information___20__klausurenbloecke/",
+  "name": "OLG Köln Prüfungsamt",
+  "current": {
+    "timestamp": "2026-02-15T22:34:40.085Z",
+    "content": "Liste",
+    "status": 200,
+    "hash": "7343841e724e89445740d5ffded9127143fba53fc8a29bedb09d0e1f945d81b7"
+  },
+  "last_check": "2026-02-15T22:34:40.085Z",
+  "change_count": 0,
+  "error_count": 0,
+  "enabled": true,
+  "selector": "a[href$=\".pdf\"]"
+}

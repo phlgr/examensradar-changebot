@@ -1,0 +1,15 @@
+{
+  "url": "https://www.olg-hamm.nrw.de/aufgaben/justizpruefungsamt/02_staatl_pflichtfachpruefung/04_termine/01_aufsichtsarbeiten-schriftlich/05_informationen_20_Abs1_Nr_1_JAG/",
+  "name": "OLG Hamm Prüfungsamt",
+  "current": {
+    "timestamp": "2026-02-15T22:34:40.451Z",
+    "content": "Informationen gem. § 20 Abs. 1 Nr. 1 JAG NW",
+    "status": 200,
+    "hash": "1ed55d665a3ab2fd50eb4f73bb8922e089d7f7768f3ecbc12e6298aaede110c5"
+  },
+  "last_check": "2026-02-15T22:34:40.451Z",
+  "change_count": 0,
+  "error_count": 0,
+  "enabled": true,
+  "selector": "a[href$=\".pdf\"]"
+}
