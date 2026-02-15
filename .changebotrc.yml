@@ -1,50 +1,25 @@
-# Define notification channels
-channels:
-  # ntfy.sh channel example
-  ntfy:
-    type: ntfy
-    topic: ${NTFY_TOPIC:-changebot}
-    server: ${NTFY_SERVER:-https://ntfy.sh}
-
-  # Webhook channel examples (uncomment to use)
-  # slack:
-  #   type: webhook
-  #   url: ${SLACK_WEBHOOK_URL}
-  #   method: POST
-  #   headers:
-  #     Content-Type: application/json
-  #   body: |
-  #     {"text": "{{title}}", "blocks": [{"type": "section", "text": {"type": "mrkdwn", "text": "{{message}}"}}]}
-
-  # discord:
-  #   type: webhook
-  #   url: ${DISCORD_WEBHOOK_URL}
-  #   headers:
-  #     Content-Type: application/json
-  #   body: |
-  #     {"content": "**{{title}}**\n{{message}}\n{{url}}"}
-
 settings:
   timeout: 30000 # Request timeout in ms
   retries: 3 # Retry failed fetches
   large_content_threshold: 1048576 # 1MB warning threshold
   error_notification_threshold: 3 # Only notify after this many consecutive errors
   error_notification_cooldown_ms: 3600000 # 1 hour cooldown between error notifications
-  default_channel: ntfy # Default channel when website doesn't specify notifiers
 
 websites:
-  - name: Example Website
-    url: https://example.com
-    selector: null # CSS/XPath selector (null = full page)
+  - name: OLG Düsseldorf Prüfungsamt
+    url: https://www.olg-duesseldorf.nrw.de/aufgaben/pruefungsamt/06aktuelles/index.php
+    selector: 'a[href$=".pdf"]' # Only monitor PDF links to catch new result lists
     enabled: true
     priority: high
-    # Uses default_channel since no notifiers specified
-
-  - name: Example Website with selector
-    url: https://example.com
-    selector: "h1:contains('Example')" # CSS/XPath selector (null = full page)
-    enabled: true
-    priority: high
+    notifiers:
+      - type: webhook
+        url: https://examensradar.de/api/webhook/results
+        method: POST
+        headers:
+          Content-Type: application/json
+          Authorization: Bearer ${EXAMENSRADAR_WEBHOOK_SECRET}
+        body: |
+          {"jpa_slug": "düsseldorf"}
 
   # Example: Website with custom inline webhook notifier
   # - name: Critical Service
