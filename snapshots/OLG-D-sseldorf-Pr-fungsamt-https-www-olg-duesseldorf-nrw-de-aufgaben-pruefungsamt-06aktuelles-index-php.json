@@ -2,13 +2,19 @@
   "url": "https://www.olg-duesseldorf.nrw.de/aufgaben/pruefungsamt/06aktuelles/index.php",
   "name": "OLG Düsseldorf Prüfungsamt",
   "current": {
+    "timestamp": "2026-02-27T10:20:39.653Z",
+    "content": "Liste November 2025",
+    "status": 200,
+    "hash": "eda8bc9d8572c968505448fb3af3426a842c4b677f641e883627d8c3db427eb5"
+  },
+  "previous": {
     "timestamp": "2026-02-15T22:02:28.006Z",
     "content": "Liste Oktober 2025",
     "status": 200,
     "hash": "e628b7d7b24b4d6546016dca84fb716bd69fd59f8808da649b14a9612b96f8ea"
   },
-  "last_check": "2026-02-15T22:02:28.006Z",
-  "change_count": 0,
+  "last_check": "2026-02-27T10:20:39.655Z",
+  "change_count": 1,
   "error_count": 0,
   "enabled": true,
   "selector": "a[href$=\".pdf\"]"
