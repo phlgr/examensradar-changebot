@@ -8,7 +8,7 @@ settings:
 websites:
   - name: OLG Düsseldorf Prüfungsamt
     url: https://www.olg-duesseldorf.nrw.de/aufgaben/pruefungsamt/06aktuelles/index.php
-    selector: 'xpath=//article[@id="mainArticle"]//a[contains(@href,".pdf")]/@href'
+    selector: 'article#mainArticle'
     enabled: true
     priority: high
     notifiers:
@@ -23,7 +23,7 @@ websites:
 
   - name: OLG Köln Prüfungsamt
     url: https://www.olg-koeln.nrw.de/aufgaben/justizpruefungsamt/002_aktuelles/0005_zw_information___20__klausurenbloecke/
-    selector: 'xpath=//article[@id="mainArticle"]//a[contains(@href,".pdf")]/@href'
+    selector: 'article#mainArticle'
     enabled: true
     priority: high
     notifiers:
@@ -38,7 +38,7 @@ websites:
 
   - name: OLG Hamm Prüfungsamt
     url: https://www.olg-hamm.nrw.de/aufgaben/justizpruefungsamt/02_staatl_pflichtfachpruefung/04_termine/01_aufsichtsarbeiten-schriftlich/05_informationen_20_Abs1_Nr_1_JAG/
-    selector: 'xpath=//article[@id="mainArticle"]//a[contains(@href,".pdf")]/@href'
+    selector: 'article#mainArticle'
     enabled: true
     priority: high
     notifiers:
