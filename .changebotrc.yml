@@ -22,8 +22,8 @@ websites:
           {"jpa_slug": "düsseldorf"}
 
   - name: OLG Köln Prüfungsamt
-    url: https://www.olg-koeln.nrw.de/aufgaben/justizpruefungsamt/002_aktuelles/0005_zw_information___20__klausurenbloecke/
-    selector: 'article#mainArticle'
+    url: https://www.olg-koeln.nrw.de/aufgaben/justizpruefungsamt/002_aktuelles/
+    selector: 'section:has(.titlebarTitle:contains("§ 20"))'
     enabled: true
     priority: high
     notifiers:
