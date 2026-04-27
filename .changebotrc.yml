@@ -23,7 +23,7 @@ websites:
 
   - name: OLG Köln Prüfungsamt
     url: https://www.olg-koeln.nrw.de/aufgaben/justizpruefungsamt/002_aktuelles/
-    selector: 'section:has(.titlebarTitle:contains("§ 20"))'
+    selector: 'section.article-zwischentext:has(.titlebarTitle:contains("§ 20"))'
     enabled: true
     priority: high
     notifiers:
